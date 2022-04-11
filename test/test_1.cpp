@@ -15,12 +15,7 @@ class SomaTest : public CPPUNIT_NS::TestCase
   }
 };
 
-
-CPPUNIT_TEST_SUITE_REGISTRATION(SomaTest);
-
-int main()
-
-{
+int main(){
   CPPUNIT_NS::TestResult controller;
 
   CPPUNIT_NS::TestResultCollector result;
