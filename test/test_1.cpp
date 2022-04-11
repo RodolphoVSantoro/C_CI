@@ -11,7 +11,7 @@ class SomaTest : public CPPUNIT_NS::TestCase
   SomaTest( std::string name ) : CppUnit::TestCase( name ) {}
   
   void runTest() {
-    CPPUNIT_ASSERT( soma(10, 1) == 11 );
+    CPPUNIT_ASSERT( soma(10, 2) == 12 );
 };
 
 
