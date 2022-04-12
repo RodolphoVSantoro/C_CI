@@ -13,12 +13,12 @@ class SomaTest : public CPPUNIT_NS::TestCase
   void testeSoma() {
     CPPUNIT_ASSERT( soma(10, 2) == 12 );
   }
-};
-
+  
   CPPUNIT_TEST_SUITE(SomaTest);
   CPPUNIT_TEST(testeSoma);
   CPPUNIT_TEST_SUITE_END();
-  CPPUNIT_TEST_SUITE_REGISTRATION( MyTest );
+};
+  CPPUNIT_TEST_SUITE_REGISTRATION(SomaTest);
 
 int main(){
 
