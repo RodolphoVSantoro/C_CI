@@ -8,7 +8,7 @@
 
 class SomaTest : public CPPUNIT_NS::TestCase
 {
-  SomaTest( std::string name ) : CppUnit::TestCase( name ) {}
+  SomaTest() : CppUnit::TestCase() {}
   
   void testeSoma() {
     CPPUNIT_ASSERT( soma(10, 2) == 12 );
