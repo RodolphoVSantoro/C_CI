@@ -1,7 +1,7 @@
 all:
 	g++ -std=c++17 src/main.cpp -o exe
-	g++ -std=c++17 -c src/main.cpp
-	g++ -fsanitize=address --std=c++17 test/tests.cpp -o tests
+	g++ -std=c++17 -c test/tests.cpp
+	g++ -fsanitize=address --std=c++17 main.o test/tests.cpp -o tests
 test:
 	chmod +x exe
 	./tests
