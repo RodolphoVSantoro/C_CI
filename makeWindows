@@ -1,9 +1,9 @@
 all:
-	cl /c src/main.cpp
-	cl /c src/lib.cpp
-	cl /c test/tests.cpp
-	link main.obj lib.obj
-	link tests.obj lib.obj
+	cl.exe /c src/main.cpp
+	cl.exe /c src/lib.cpp
+	cl.exe /c test/tests.cpp
+	link.exe main.obj lib.obj
+	link.exe tests.obj lib.obj
 test:
 	./tests
 clean:
