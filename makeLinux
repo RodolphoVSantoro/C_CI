@@ -2,7 +2,7 @@ all:
 	g++ -std=c++17 -c src/lib.cpp
 	g++ -fsanitize=address --std=c++17 lib.o test/tests.cpp -o tests
 	g++ -std=c++17 src/main.cpp lib.o -o exe
-test:
+run-test:
 	chmod +x exe
 	./tests
 clean:
