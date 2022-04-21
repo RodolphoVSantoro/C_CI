@@ -1,9 +1,9 @@
 all:
-	g++ -std=c++17 -c src/lib.cpp
-	g++ -fsanitize=address --std=c++17 lib.o test/tests.cpp -o tests
-	g++ -std=c++17 src/main.cpp lib.o -o exe
+	g++ -std=c++17 -c src/liberr.cpp
+	g++ -fsanitize=address --std=c++17 liberr.o test/tests.cpp -o tests
+	g++ -std=c++17 src/main.cpp liberr.o -o exe
 run_test:
 	chmod +x exe
 	./tests
 clean:
-	$(RM) exe tests lib.o
+	$(RM) exe tests liberr.o
