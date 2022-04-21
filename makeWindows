@@ -4,7 +4,7 @@ all:
 	cl /c test/tests.cpp
 	link main.obj lib.obj
 	link tests.obj lib.obj
-test:
+run-test:
 	./tests
 clean:
 	$(RM) main tests lib.obj tests.obj main.obj
