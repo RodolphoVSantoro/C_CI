@@ -16,7 +16,7 @@ jobs:
     
     steps:
     - name: A
-      run: npm cache clean
+      run: npm cache verify
     - name: Download Internet
       run: npm install
     - name: Run eslint
