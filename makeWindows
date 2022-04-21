@@ -1,10 +1,8 @@
 all:
-	cl.exe /c src/main.cpp
-	cl.exe /c src/lib.cpp
-	cl.exe /c test/tests.cpp
-	link.exe main.obj lib.obj
-	link.exe tests.obj lib.obj
+	g++ -std=c++17 src/main.cpp -o exe
+	g++ -std=c++17 -c src/lib.cpp
+	g++ -fsanitize=address --std=c++17 lib.o test/tests.cpp -o tests
 test:
 	./tests
 clean:
-	$(RM) main.exe tests.exe lib.obj main.obj tests.obj
+	$(RM) exe tests lib.o
