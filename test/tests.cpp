@@ -12,6 +12,6 @@ TEST_CASE("Ex1", "[example]")
 
 TEST_CASE("Ex2", "[example]")
 {
-    REQUIRE(soma(3,3) == 9);
+    REQUIRE(soma(3,3) == 6);
 }
 
