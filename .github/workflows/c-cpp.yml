@@ -8,11 +8,32 @@ on:
 
 jobs:
   build-test:
-  
-    runs-on: ${{ matrix.os }}
+    name: OS config 
+    runs-on: ${{ matrix.config.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        config:
+        - {
+            name: "windows-latest",
+            os: windows-latest,
+            artifact: "windows_msvc.7z",
+            build_type: "Release",
+            cc: "cl",
+            cxx: "cl",
+            environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
+            archiver: "7z a",
+            generators: "Visual Studio 16 2019"
+          }
+        - {
+            name: "ubuntu-latest",
+            os: ubuntu-latest,
+            artifact: "ubuntu_gcc9.7z",
+            build_type: "Release",
+            cc: "gcc",
+            cxx: "g++",
+            archiver: "7z a",
+            generators: "Ninja"
+          }
     
     steps:
     - uses: actions/checkout@v3
