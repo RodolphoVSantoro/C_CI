@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: config
       if: ${{matrix.os=='windows-latest'}}
-      run: ${{matrix.confScript}}
+      run: "${{matrix.confScript}}"
     - name: make
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: make -f makeLinux
