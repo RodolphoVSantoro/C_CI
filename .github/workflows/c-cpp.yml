@@ -20,13 +20,11 @@ jobs:
     - name: make
       if: ${{ matrix.os == 'windows-latest' }}
       shell: cmd
-      env:
-        cxx: clang
       run: make -f makeWindows
     - name: make test
       if: ${{ matrix.os == 'ubuntu-latest' }}
-      run: make -f makeLinux test
+      run: make -f makeLinux run_test
     - name: make test
       if: ${{ matrix.os == 'windows-latest' }}
       shell: cmd
-      run: make -f makeWindows test
+      run: make -f makeWindows run_test
