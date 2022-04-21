@@ -12,13 +12,13 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         mf: [makeLinux, makeWindows]
-        confScript: [C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat]
+        confScript: ["C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat"]
     
     steps:
     - uses: actions/checkout@v3
     - name: config
       if: ${{matrix.os=='windows-latest'}}
-      run: "${{matrix.confScript}}"
+      run: ${{matrix.confScript}}
     - name: make
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: make -f makeLinux
