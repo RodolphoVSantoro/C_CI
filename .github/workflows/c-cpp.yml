@@ -15,8 +15,8 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     
     steps:
-    - name: Enable Developer Command Prompt (amd64)
-      uses: ./
+    - uses: actions/checkout@v3
+    - uses: ./
       with:
         arch: amd64
     - uses: actions/checkout@v3
